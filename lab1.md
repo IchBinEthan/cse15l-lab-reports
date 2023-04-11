@@ -13,6 +13,8 @@ We start by opening a terminal and typing the command 'ssh' then typing in our e
 
 This is to connect to the server, which will then give us a prompt to continue connecting. It will then ask us to unput your password. Once given, we should be able to connect remotely to the server!
 
+![Image](cse15LAB1 - Step2.jpg)
+
 Step 3 -- Run Commands! We are able to run commands into the terminal after logging in. Use some useful commands that are provided in the write-up for the lab, or the ones in the class lectures! Here are some examples of me running code.
 
 

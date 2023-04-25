@@ -2,7 +2,8 @@
 
 Hi friends of CSE 15L! This is a tutorial for all of you to log into a course-specific account on ieng6.
 
-Step 0 -- Have an ieng6@ucsd.edu account to begin with. Please make sure you have one to connect with; 
+## Step 0 -- Register for the account.
+Have an ieng6@ucsd.edu account to begin with. Please make sure you have one to connect with; 
 If not, ask your TA for help in registering. 
 
 ## Step 1 -- Install Visual Studio code. 

@@ -38,6 +38,10 @@ Before:
     } 
   }
   ```
+  * The key idea for this is to figure out how to arrange this in such a way that the code can run without any contradictions or repeats of past assignments. I originally wanted to take the element assigned at index `length - i - 1` and assign to index `i`, but the code wouldn't work because the result would be a split, symmetrical array from the middle. 
+  * The idea is -- I define a `temp` variable to store the beginning element, do the assignment of the rest of the spots, then the spot on the very end, indexed at `arr.length - i - 1`, will get assigned whatever is in the temp variable. 
+  * This should only get done only half the number of times. 
+  
   Here is a passing test:
   ```
     @Test 
@@ -52,3 +56,5 @@ Before:
 
 
 ## Part 3 -- Anything New?
+
+I learned more about debugging code and trying to figure out how to use more effective strategies in debugging. I understand and learned that the process is very frustrating at times, but such is the life of a CS student. I think the usage of the temp variable was very intuitive, shoutout to the TA that helped me with that :)

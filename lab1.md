@@ -19,4 +19,12 @@ This is to connect to the server, which will then give us a prompt to continue c
 
 Step 3 -- Run Commands! We are able to run commands into the terminal after logging in. Use some useful commands that are provided in the write-up for the lab, or the ones in the class lectures! Here are some examples of me running code.
 
+Here are some examples for codes to run:
+```
+{cd ~
+cd
+ls -lat
+ls -a}
+```
+
 ![Image](https://ichbinethan.github.io/cse15l-lab-reports/cse15Lab1step3.png)

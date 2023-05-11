@@ -1,7 +1,6 @@
 # Lab Report 2
 
-## Part 1 -- StringSearch.java
-(Note to examiner: I don't know how else to add the 
+## Part 1 -- StringSearch.java 
 
 ![Image](https://ichbinethan.github.io/cse15l-lab-reports/cse15Lab2stringSearch.png)
 

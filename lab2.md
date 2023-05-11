@@ -43,10 +43,12 @@ Before:
   }
   ```
   
-  Here are implementations of the method before and after it was debuggedin these JUnit tests:
+  Here are implementations of the method before and after it was debugged in these JUnit tests:
+  
   ![Image](https://ichbinethan.github.io/cse15l-lab-reports/cse15Lab2fail.png)
   ![Image](https://ichbinethan.github.io/cse15l-lab-reports/cse15Lab2pass.png)
   
+  * We can see here that I needed to write the test correctly in order to properly evaluate. We are dealing with a void method, therefore the tests need to account for this. I did not make a new array to evaluate the result because there is no result at all to check using the method.
   * The key idea for this is to figure out how to arrange this in such a way that the code can run without any contradictions or repeats of past assignments. I originally wanted to take the element assigned at index `length - i - 1` and assign to index `i`, but the code wouldn't work because the result would be a split, symmetrical array from the middle. 
   * The idea is -- I define a `temp` variable to store the beginning element, do the assignment of the rest of the spots, then the spot on the very end, indexed at `arr.length - i - 1`, will get assigned whatever is in the temp variable. 
   * This should only get done only half the number of times. 

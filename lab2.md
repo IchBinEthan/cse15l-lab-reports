@@ -42,6 +42,11 @@ Before:
     } 
   }
   ```
+  
+  Here are implementations of the method before and after it was debuggedin these JUnit tests:
+  ![Image](https://ichbinethan.github.io/cse15l-lab-reports/cse15Lab2fail.png)
+  ![Image](https://ichbinethan.github.io/cse15l-lab-reports/cse15Lab2pass.png)
+  
   * The key idea for this is to figure out how to arrange this in such a way that the code can run without any contradictions or repeats of past assignments. I originally wanted to take the element assigned at index `length - i - 1` and assign to index `i`, but the code wouldn't work because the result would be a split, symmetrical array from the middle. 
   * The idea is -- I define a `temp` variable to store the beginning element, do the assignment of the rest of the spots, then the spot on the very end, indexed at `arr.length - i - 1`, will get assigned whatever is in the temp variable. 
   * This should only get done only half the number of times. 
@@ -55,7 +60,17 @@ Before:
     assertArrayEquals(ArrayExamples.reversed(exArray), exResult);
   }
   ```
-
+  
+  Here is a failing test:
+  ```
+    @Test 
+  public void testReverseInPlace1(){
+    int[] exInput = new int[]{1, 2, 3, 4};
+    int[] exInput = new int[]{4, 3, 2, 1};
+    assertArrayEquals(exOutput, ArrayExamples.reverseInPlace(exInput));
+  }
+  ```
+The reason why this one fails is because the test for reverseInPlace assumes that the method isn't void. We comnpare results of arrays from a void method attempting to give a result. This is a contradiction and therefore the test doesn't pass. 
 
 
 

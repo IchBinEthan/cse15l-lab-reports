@@ -207,7 +207,7 @@ The argument `less -p` allows the user to view the document.  It allwos the user
 
 ***How is this command usefrul?*** Like the `less +` command, using the command shifts the view -- yet, a reference isn't necessary and thus is irrelevant to know/remember which exact line a user needs. This could be particularly useful for finding methods by the name of the method or looking for a class definition by looking for some pattern `"class Name"` for some class name `Name`. 
 
-
+Here are instances of the command `less -p` being used for the same two files `pmed.0020085.txt` and `Fire_Victims_Sue.txt` respectively.
 
 
 ``` less -p "we" ./technical/plos/pmed.0020085.txt  ```
@@ -260,6 +260,91 @@ shape. That's actually one of the claims," he said.
   
   
   
-  ## 
+  ## `less -I`;
+  
+This command allows for case-insensitive searches, such as those found with methods like `less -p`. In other words, a user could look for the first instance of a pattern by letters using a conjuction of `-I` and `-p`, no matter whether the entire string matches the case of the query. 
+
+***How can this be useful?*** In conjuction with these search commands, one may be able to find and view parts of a file, even if there are errors/inconsistencies with the file contents and how they are expected to look. For example, if I search for the first instance of the word `apple` and the first instance of the word is written out `aPpLe`, running the command `-Ip` should still give mde a view starting with the line containing `aPpLe` regardless.
+
+Here are instances of the command `less -I` being used in conjunction with `-p`, again for the same two files.
   
   
+  
+  ```$ less -Ip "iN" ./technical/plos/pmed.0020085.txt```
+
+       ```We appreciate the note from Drs. Koudinov and Berezov [1]. In our opinion, no model has
+        yet been presented that plausibly accounts for all the data on statins, cholesterol,
+        amyloid-<C3><9F> protein (A<C3><9F>), and Alzheimer disease. In our paper [2], we present evidence that
+        the isoprenoid pathway contributes to statin-activated shedding of the APP ectodomain in
+        cultured cells. We do not yet know which (if any) other <E2><80><9C>cholesterol-related<E2><80><9D> Alzheimer
+        phenomena are also attributable to modulation of isoprenoids, Rho, or ROCK.
+        Previously, conventional wisdom held that A<C3><9F> load and hypercholesterolemia were directly
+        related, based on observations that high-fat diet aggravated amyloid pathology in
+        plaque-forming mice [3,4,5]. More recently, however, the formulation that statins act
+        simply via cholesterol-lowering fails to account for several observations that cannot
+        immediately be reconciled, either with the original <E2><80><9C>dogma<E2><80><9D> or with each other.
+        First, Fagan et al. [6] questioned the role of cholesterol as the final common pathway
+        in A<C3><9F> load specification, since, in their experiments, low cholesterol per se apparently
+        had no impact on brain A<C3><9F> load in plaque-forming transgenic mice. Then, equally puzzling
+        pharmacological data emerged. Atorvastatin was shown to lower brain amyloid load and A<C3><9F>
+        levels, but brain cholesterol levels were unaffected by the drug [7]. In an apparent
+        complete contradiction with the original observations, now, some investigators have been
+        able to devise circumstances under which there is an inverse relationship between
+        cholesterol and A<C3><9F>, with low neuronal cholesterol increasing A<C3><9F> generation [8], and vice
+        versa [9]. These newer observations are unexpected and extremely puzzling, and no
+        comprehensive explanation has yet emerged.
+        For those readers seeking an update on this challenging area, we would direct your
+        attention to the Alzheimer Research Forum Web page
+        (http://www.alzforum.org/new/detailprint.asp?id=1135), where you will find an excellent
+        review of the literature as well as a series of evaluations of how our data fit into
+        existing scenarios and models regarding cholesterol, statins, cerebral amyloidosis, and the
+        cognitive failure of Alzheimer disease. ```
+
+Here in the first example, my query was `iN` -- an unconventional way of writing the string `in`. Yet the command `-i` helps the code be interpreted to find the first instance of the string with the letters `in` regardless of case. This is first seen in the name `Koudinov` in the first line, therefore the first line of content and everything after gets printed out.
+
+
+``` $ less -Ip "A" ./technical/government/Media/Fire_Victims_Sue.txt ```
+
+``` 
+Kalamazoo Gazette
+
+Alamo Fire Victims Sue Landlord
+By Craig McCool
+Thursday, August 8, 2002
+Nine families displaced by a fire at Alamo Hills Apartments in
+March filed lawsuits Wednesday against the apartment complex.
+They allege that the complex could have done more to protect
+belongings they were forced to abandon in the aftermath of the
+blaze.
+Bernard Dempsey Jr., an attorney with Western Michigan Legal
+Services, the group that represents the tenants, said Alamo Hills
+gave the displaced families very limited opportunity to remove
+belongings.
+"They were given three days to get their stuff out, and if they
+couldn't get moved out in three days, their stuff was discarded,"
+Dempsey said. "Alamo Hills just threw it out."
+Others, he said, lost possessions to looters after the March 23
+blaze, which left 78 people temporarily homeless.
+According to the lawsuit, the tenants were prohibited from
+entering their apartments to retrieve possessions and were promised
+that the complex would provide security.
+A spokesperson for PM One, the company that manages Alamo Hills,
+could not be reached for comment.
+Nine separate suits were filed in 8th District Court, which
+handles civil claims of less than $25,000.
+"We're asking for the reimbursement of the value of their
+property and a small amount for stress -- $3,000 on top of their
+out-of-pocket expenses for their lost stuff," Dempsey said.
+"They're not looking to get rich off this. A lot of this is
+simply because they were treated so badly."
+Dempsey said most of the tenants who filed suits still live at
+the apartment complex, although many are trying to find homes
+elsewhere.
+"The new apartments (they were provided) were not in very good
+shape. That's actually one of the claims," he said. 
+```
+
+In the second example, my query was `A` instead of a lowercase a. The code looks for the first instance of an A, both lowercase and uppercase. This happens actually at line 1 as well, in `Kalamazoo` -- the first word of the file! Therefore the entire file gets viewed.
+
+
+With these four commands, one can use `-less` in really useful and efficient ways that can make obtaining and viewing files more relevant to programmers.

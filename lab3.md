@@ -8,7 +8,7 @@ The command `less -N` numbers out the lines of the file and then prints them out
 
 While may not be noteworthy, the indexing indeed starts from 1 (as opposed to, say, 0 -- like in array indexing). So the number 1 refers to the first line, 2 for the second, and so on.
 
-**How is this command important?** It becomes easier to refereence pieces of code by their location in the file. For example, a programmer can realize where a mistake was made in the file and place an exact location on it based on which line it was.
+***How can this be useful?*** It becomes easier to refereence pieces of code by their location in the file. For example, a programmer can realize where a mistake was made in the file and place an exact location on it based on which line it was.
 
 Here are instances of the command `less -N` being used for two different files: `pmed.0020085.txt` and `Fire_Victims_Sue.txt` respectively.
 
@@ -110,7 +110,7 @@ For example, say I wish to view lines `20` and beyond of some file `fileName.txt
 
 `$ less +20 ./fileName.txt`
 
-**How is this command important?** This is used to make viewing files more efficiently. If, for example, I have a Java file that has a particular method whose code started at line `37`, viewing the contents starting from line 37 from the top would allow me to see the method I want to edit.  
+***How is this command useful?*** This is used to make viewing files more efficiently. If, for example, I have a Java file that has a particular method whose code started at line `37`, viewing the contents starting from line 37 from the top would allow me to see the method I want to edit.  
 
 Here are instances of the command `less +` being used for the same two files `pmed.0020085.txt` and `Fire_Victims_Sue.txt` respectively.
 
@@ -200,4 +200,66 @@ shape. That's actually one of the claims," he said.
 
 Similarly for this example, `Fire_Victims_Sue.txt` originally has the first four lines empty. I can also shift my view to ignore those lines and view the beginning of the content at the top of my page by using the command to start viewing from line 5.
 
+  
+## `less -p`;
+
+The argument `less -p` allows the user to view the document.  It allwos the user to **look at the document starting at the line with the first instance of the pattern the user searches for**. Unlike the `less +` argument, users can serach based on content of the file itself rather than a reference. The pattern that the user is searching for is an input of type `String`.
+
+***How is this command usefrul?*** Like the `less +` command, using the command shifts the view -- yet, a reference isn't necessary and thus is irrelevant to know/remember which exact line a user needs. This could be particularly useful for finding methods by the name of the method or looking for a class definition by looking for some pattern `"class Name"` for some class name `Name`. 
+
+
+
+
+``` less -p "we" ./technical/plos/pmed.0020085.txt  ```
+``` amyloid-<C3><9F> protein (A<C3><9F>), and Alzheimer disease. In our paper [2], we present evidence that
+    the isoprenoid pathway contributes to statin-activated shedding of the APP ectodomain in
+        cultured cells. We do not yet know which (if any) other <E2><80><9C>cholesterol-related<E2><80><9D> Alzheimer
+        phenomena are also attributable to modulation of isoprenoids, Rho, or ROCK.
+        Previously, conventional wisdom held that A<C3><9F> load and hypercholesterolemia were directly
+        related, based on observations that high-fat diet aggravated amyloid pathology in
+        plaque-forming mice [3,4,5]. More recently, however, the formulation that statins act
+        simply via cholesterol-lowering fails to account for several observations that cannot
+        immediately be reconciled, either with the original <E2><80><9C>dogma<E2><80><9D> or with each other.
+        First, Fagan et al. [6] questioned the role of cholesterol as the final common pathway
+        in A<C3><9F> load specification, since, in their experiments, low cholesterol per se apparently
+        had no impact on brain A<C3><9F> load in plaque-forming transgenic mice. Then, equally puzzling
+        pharmacological data emerged. Atorvastatin was shown to lower brain amyloid load and A<C3><9F>
+        levels, but brain cholesterol levels were unaffected by the drug [7]. In an apparent
+        complete contradiction with the original observations, now, some investigators have been
+        able to devise circumstances under which there is an inverse relationship between
+        cholesterol and A<C3><9F>, with low neuronal cholesterol increasing A<C3><9F> generation [8], and vice
+        versa [9]. These newer observations are unexpected and extremely puzzling, and no
+        comprehensive explanation has yet emerged.
+        For those readers seeking an update on this challenging area, we would direct your
+        attention to the Alzheimer Research Forum Web page
+        (http://www.alzforum.org/new/detailprint.asp?id=1135), where you will find an excellent
+        review of the literature as well as a series of evaluations of how our data fit into
+        existing scenarios and models regarding cholesterol, statins, cerebral amyloidosis, and the
+        cognitive failure of Alzheimer disease.   
+  ```
+  In this example with `pmed.0020085.txt ` I wanted to find the first instance of the string `we`. Note that this particular search doesn't specifically look for the first instance of the word 'we'. It searches for the first instance of the string containing the letters `we`.
+  
+  ``` less -p "$" ./technical/government/Media/Fire_Victims_Sue.txt ```
+  ``` handles civil claims of less than $25,000.
+"We're asking for the reimbursement of the value of their
+property and a small amount for stress -- $3,000 on top of their
+out-of-pocket expenses for their lost stuff," Dempsey said.
+"They're not looking to get rich off this. A lot of this is
+simply because they were treated so badly."
+Dempsey said most of the tenants who filed suits still live at
+the apartment complex, although many are trying to find homes
+elsewhere.
+"The new apartments (they were provided) were not in very good
+shape. That's actually one of the claims," he said.
+
+
+
+
+```
+  In this example with `Fire_Victims_Sue.txt` I wanted to find the first instance of the string `$25,000`. The result after running lets me see the contents of the file including the line with "$25,000" and beyond.
+  
+  
+  
+  ## 
+  
   

@@ -1,6 +1,4 @@
-# Lab report 4 -- 
-
-Note: I collaborated with Emi Van Cleave on this assignment. Props to Emi.
+# Lab report 4 -- Github and the Command Line
 
 ### Step 4: Logging into ieng6.
 
@@ -29,6 +27,8 @@ I typed out `cd lab7` to change the directory to that of lab7. I typed out `bash
 
 In this case, I needed to open `vim`.
 
+![Image](https://ichbinethan.github.io/cse15l-lab-reports/cs15lab4.E.png)
+
 I opened `vim` by typing `vim ListExamples.java` then `<enter>`. From then on, I was able to have access to the file. It prompted me to type `E` to edit, and then now I had access to edit. 
 
 
@@ -49,5 +49,12 @@ I then reran the test by typing `bash test.sh` again and then `<enter>` to execu
 
 ### Step 9: Commit and push the resulting change to your Github account.
 
+![Image](https://ichbinethan.github.io/cse15l-lab-reports/cs15lab4.9.1.png)
 
+So for this, I had to run the 4 different commands. I first ran `got add ListExamples.java` and then pressed `<enter>` to update the file for committing.
 
+I then checked the status by writing `git status` and `<enter>` to make sure it worked. Then I committed the changes by typing `git commit -m` then my comment `:44 edited typo`. At this point everything seemed to be working fine.
+
+![Image](https://ichbinethan.github.io/cse15l-lab-reports/cs15lab4.9.2.png)
+
+Then at here, I tried to push by writing `git push` then the link to the repository. I signed using my ID `IchBinEthan` and using an accesss tokem. However, I ran into this error. It was very confusing as to what went wrong. At the time of writing this issue did not get resolved. I believe I tried executing correctly, though this is the situation.

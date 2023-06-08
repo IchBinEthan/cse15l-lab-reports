@@ -29,13 +29,23 @@ I typed out `cd lab7` to change the directory to that of lab7. I typed out `bash
 
 In this case, I needed to open `vim`.
 
-I opened `vim` by typing `vim ListExamples.java` then `<enter>`. From then on, I was able to have access to the file. For editing, I wrote `
+I opened `vim` by typing `vim ListExamples.java` then `<enter>`. From then on, I was able to have access to the file. It prompted me to type `E` to edit, and then now I had access to edit. 
+
 
 ![Image](https://ichbinethan.github.io/cse15l-lab-reports/cs15Lab4.7.1.png)
 
+Here is the location of where the change needed to happen. For edsiting, I then pressed `<down>`  key 4 times to go down 4 lines, then `<right>` 9 times to go accross 9 characters to where I needed to edit. I then changed the character to 2 by pressing `2`, then `<right>` then `<backspace>`. The result of this is in the bottom of these two pictures.
+
+
 ![Image](https://ichbinethan.github.io/cse15l-lab-reports/cs15Lab4.7.2.png)
 
+To finish, I pressed `<escape>` to exit editing. Then, I typed `:wq` then `<enter>` to save file, then quit and return to command line. 
+
 ### Step 8: Run the tests, demonstrating that they now succeed.
+
+![Image](https://ichbinethan.github.io/cse15l-lab-reports/cs15Lab4.8.png)
+
+I then reran the test by typing `bash test.sh` again and then `<enter>` to execute. 
 
 ### Step 9: Commit and push the resulting change to your Github account.
 

@@ -53,7 +53,7 @@ Here is me running the test. Something is still wrong because I keep getting 0/4
 
 I was able to obtain a clone of the github repository through the write-up on EdStem. This was shortly after I finished Skill Demo 2 (yes. this is late. I know). I used the [link](inpttps://github.com/ucsd-cse15l-s23/grader-skill-demo2) provided to clone with the command `git clone`.
 
-I used `vim` to find the issue and try to fix it. The bash inputs were sued for verification, and the specific command was `bash grade.sh` and the [link](https://github.com/ucsd-cse15l-s23/list-methods-corrected) in the write up to test it with.
+I used `vim` to find the issue and try to fix it. I got a little help here from Emi. The bash inputs were sued for verification, and the specific command was `bash grade.sh` and the [link](https://github.com/ucsd-cse15l-s23/list-methods-corrected) in the write up to test it with.
 
 
 ## Part 2: Reflection
